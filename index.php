@@ -15,6 +15,7 @@
             <div class="col-md-9">
                 <?php
                     $posts = $db->get('posts', orderBy: 'post_date', type: 'DESC', limit: 5);
+                    if ($posts):
                     foreach ($posts as $post):
                 ?>
                     <div class="post">
@@ -49,7 +50,10 @@
                             </a>
                         </div>
                     </div>
-                    <?php endforeach; ?>
+                    <?php endforeach;
+                        else:?>
+                        <div class="post">لا يوجد مقالات حالياً</div>
+                        <?php endif;?>
             </div>
             <!-- Sidebar -->
             <div class="col-md-3">

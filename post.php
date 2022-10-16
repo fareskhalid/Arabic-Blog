@@ -32,7 +32,7 @@
                                     <span><i class="fa-solid fa-tags"></i><?= $post['post_category'] ?></span>
                                 </p>
                                 <p class="post-content text-left">
-                                    <?= $post['post_content']?>
+                                    <?= htmlspecialchars_decode($post['post_content'])?>
                                 </p>
                             </div>
                         </div>

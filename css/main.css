@@ -125,6 +125,7 @@ nav.navbar {
     background-color: #fff;
     border-bottom: 1px solid #eaeaea;
     padding: 20px 10px;
+    margin-bottom: 30px;
 }
 
 .latest-posts h4 {
@@ -179,4 +180,5 @@ footer {
     border-bottom: 1px solid #eaeaea;
     text-align: center;
     padding: 10px 0;
+    margin-top: 30px;
 }

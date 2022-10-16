@@ -1,6 +1,6 @@
 <?php
 /**
- * mysql database connection class
+ * Mysql database connection class
  */
 
 class DB
@@ -44,8 +44,8 @@ class DB
     public function getOne(string $table_name, string $where = null)
     {
         $where = $where ? "WHERE $where" : '';
-        $select_one = $this->con->prepare("SELECT * FROM $table_name ? LIMIT 1");
-        $select_one->execute([$where]);
+        $select_one = $this->con->prepare("SELECT * FROM $table_name $where");
+        $select_one->execute();
         return $select_one->fetch();
     }
 
